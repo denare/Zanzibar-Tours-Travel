@@ -84,3 +84,8 @@ async def startup_db_client():
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+
+@app.post("/init-db")
+async def init_db():
+    await init_database()
+    return {"message": "Database initialized with sample data!"}
