@@ -77,7 +77,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+255 774 123 456', '+255 652 789 012', 'Available 24/7'],
+      details: ['+255 678 049 280', '+255 678 049 280', 'Available 24/7'],
       action: 'Call Now'
     },
     {
@@ -89,7 +89,7 @@ const Contact = () => {
     {
       icon: MessageSquare,
       title: 'WhatsApp',
-      details: ['+255 774 123 456', 'Quick responses', 'Share photos & questions'],
+      details: ['+255 678 049 280', 'Quick responses', 'Share photos & questions'],
       action: 'WhatsApp Us'
     }
   ];
@@ -148,7 +148,7 @@ const Contact = () => {
                     className="border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white"
                     onClick={() => {
                       if (info.title === 'WhatsApp' || info.title === 'Call Us') {
-                        window.open(`https://wa.me/255774123456`, '_blank');
+                        window.open(`https://wa.me/255678049280`, '_blank');
                       } else if (info.title === 'Email Us') {
                         window.location.href = 'mailto:info@zanzibarexploretours.com';
                       } else if (info.title === 'Visit Us') {
