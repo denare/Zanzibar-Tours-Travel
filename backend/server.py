@@ -6,6 +6,7 @@ import os
 import logging
 from pathlib import Path
 from database import init_database
+from fastapi.middleware.cors import CORSMiddleware
 
 # Import route modules
 from routes import tours, contact, transfers, gallery
@@ -25,13 +26,18 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Add a direct root route on app
+@app.get("/")
+async def root():
+    return {"message": "Zanzibar Explore Tours API - Welcome!"}
+
 # Create a router with the /api prefix for existing endpoints
 api_router = APIRouter(prefix="/api")
 
-# Add your routes to the router instead of directly to app
+# API router root and health check
 @api_router.get("/")
-async def root():
-    return {"message": "Zanzibar Explore Tours API - Welcome!"}
+async def api_root():
+    return {"message": "Zanzibar Explore Tours API - API Root"}
 
 @api_router.get("/health")
 async def health_check():
@@ -46,10 +52,15 @@ app.include_router(contact.router)
 app.include_router(transfers.router)
 app.include_router(gallery.router)
 
+origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+]
+
 app.add_middleware(
     CORSMiddleware,
+    allow_origins=origins,
     allow_credentials=True,
-    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
