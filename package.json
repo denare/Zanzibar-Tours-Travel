@@ -1,0 +1,27 @@
+{
+  "name": "zanzibartourismwebsite",
+  "version": "1.0.0",
+  "description": "Tourism website for Zanzibar",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denare/Zanzibar-Tours-Travel/issues"
+  },
+  "homepage": "https://github.com/denare/Zanzibar-Tours-Travel#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  }
+}
