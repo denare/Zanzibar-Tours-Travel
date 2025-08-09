@@ -27,21 +27,29 @@ A responsive, modern tourism website built with **React.js** and **Tailwind CSS*
 - **Routing**: React Router DOM
 - **State Management**: React Hooks
 - **Backend (Planned)**: Python & MongoDB 
-- **Deployment**: Netlify 
+- **Deployment**: Vercel (FrontEnd) & Render (Backend) 
 
 ---
 
 ## 📁 Project Structure
 
 ```
-/src
-  /assets       # Images, icons
-  /components   # Reusable UI components
-  /pages        # Page-level components (Home, Tours, etc.)
-  /api          # (Planned) API services
-App.js
-index.js
-tailwind.config.js
+/backend
+  /routes
+/frontend
+  /public         # Images, icons
+     /html
+  /src
+    /components   # Reusable UI components
+    /data
+    /hooks
+    /lib
+    /pages
+    /services
+  App.js
+  index.js
+  tailwind.config.js
+/tests 
 ```
 
 ---
