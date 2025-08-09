@@ -22,7 +22,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             {/* <MapPin className="h-8 w-8 text-teal-600" /> */}
-            <img src="/logo.jpg" alt="Zanzibar Explore Tours Logo" className="h-8 w-8 object-contain" />
+            <img src="/Logo.jpg" alt="Zanzibar Explore Tours Logo" className="h-8 w-8 object-contain" />
             <span className="text-xl font-bold text-slate-800">Zanzibar Explore Tours</span>
           </Link>
 
